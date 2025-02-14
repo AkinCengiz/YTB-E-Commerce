@@ -1,0 +1,5 @@
+1 - express => http protokolünü kullanarak işlem yapmak için
+2 - cors => Api politikaları izinleri
+3 - nodemon => Sunucuyu değişiklil-klerden sonra otomatik olarak tekrar başlatmak için
+4 - dotenv => env dosyalarını tanımlamak için
+5 - mongoose => Mongo Db üzerinde işlem yapabilmek için 
