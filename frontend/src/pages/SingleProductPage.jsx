@@ -1,3 +1,4 @@
+import CampaingSingle from "../components/layout/campaing/CampaingSingle";
 import SingleProduct from "../components/products/SingleProduct";
 
 function SingleProductPage() {
@@ -8,6 +9,7 @@ function SingleProductPage() {
           <SingleProduct />
         </div>
       </section>
+      <CampaingSingle />
     </>
   );
 }

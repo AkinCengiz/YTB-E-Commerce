@@ -1,31 +1,29 @@
+import { Route, Routes } from "react-router-dom"
 import './App.css'
-import Brands from './components/layout/brands/Brands'
-// import CampaingSingle from './components/layout/campaing/CampaingSingle'
-import Policy from './components/layout/policy/Policy'
-// import CartPage from './pages/CartPage'
-// import AccountPage from './pages/AccountPage'
-// import SingleBlogPage from './pages/SingleBlogPage'
 import HomePage from "./pages/HomePage"
+import ShopPage from './pages/ShopPage'
+import BlogsPage from "./pages/BlogsPage"
+import ContactPage from './pages/ContactPage'
+import CartPage from './pages/CartPage'
+import AccountPage from './pages/AccountPage'
+import SingleBlogPage from './pages/SingleBlogPage'
+import SingleProductPage from './pages/SingleProductPage'
 
-// import BlogsPage from "./pages/BlogsPage"
-// import SingleProductPage from './pages/SingleProductPage'
-// import ShopPage from './pages/ShopPage'
-// import ContactPage from './pages/ContactPage'
 
 function App() {
   
   return (
     <>
-      <HomePage />
-      {/* <BlogsPage /> */}
-      {/* <AccountPage /> */}
-      {/* <CartPage /> */}
-      {/* <ContactPage /> */}
-      {/* <ShopPage /> */}
-      {/* <SingleProductPage /> */}
-      {/* <SingleBlogPage /> */}
-      <Brands />
-      <Policy />
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/shop" element={<ShopPage />} />
+      <Route path="/blog" element={<BlogsPage/>} />
+      <Route path="/contact" element={<ContactPage />} />
+      <Route path="/cart" element={<CartPage />} />
+      <Route path="/account" element={<AccountPage />} />
+      <Route path="/singleblog" element={<SingleBlogPage/>} />
+      <Route path="/singleproduct" element={<SingleProductPage />} />
+    </Routes>
     </>
   )
 }

@@ -1,6 +1,8 @@
 import Blogs from "../components/blogs/Blogs";
 import Campaings from "../components/campaings/Campaings";
 import Categories from "../components/categories/Categories";
+import Brands from "../components/layout/brands/Brands";
+import CampaingSingle from "../components/layout/campaing/CampaingSingle";
 import Products from "../components/products/Products";
 import Slider from "../components/slider/Slider";
 
@@ -269,6 +271,8 @@ const HomePage = () => {
           </div>
         </section>
         <Blogs />
+        <Brands />
+        <CampaingSingle />
       </div>
     </>
   );

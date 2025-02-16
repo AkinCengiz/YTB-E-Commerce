@@ -3,6 +3,7 @@ import Header from "../components/layout/header/Header"
 import Footer from "../components/layout/footer/Footer"
 import Search from "../components/modals/Search";
 import Dialog from "../components/modals/Dialog";
+import Policy from "../components/layout/policy/Policy"
 import { useState } from "react";
 
 function SiteLayout({children}) {
@@ -14,6 +15,7 @@ function SiteLayout({children}) {
         <Dialog isDialogShow={isDialogShow} setIsDialogShow={setIsDialogShow}/>
         <Header setIsSearchShow={setIsSearchShow}/>
             { children }
+        <Policy />
         <Footer/>
     </div>
   )
