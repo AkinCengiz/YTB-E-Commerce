@@ -1,0 +1,6 @@
+1 - React page yapıları oluşturulacak.
+2 - Backend tarafında paketler kurulacak.
+3 - React component yapıları oluşturulacak.
+4 - Backend projesi tamamlanacak.
+5 - Admin panel oluşturulacak.
+6 - Frontend react tarafı tamamlanacak.
