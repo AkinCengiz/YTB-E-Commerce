@@ -1,4 +1,5 @@
-const Header = () => {
+
+const Header = ({setIsSearchShow}) => {
   return (
     <>
       <header>
@@ -179,7 +180,7 @@ const Header = () => {
                   <a href="account.html" className="header-account">
                     <i className="bi bi-person" />
                   </a>
-                  <button className="search-button">
+                  <button className="search-button" onClick={() => setIsSearchShow(true)}>
                     <i className="bi bi-search" />
                   </button>
                   <a href="#">
@@ -197,83 +198,6 @@ const Header = () => {
           </div>
         </div>
       </header>
-      <div>
-        <div className="modal-search">
-          <div className="modal-wrapper">
-            <h3 className="modal-title">Search for products</h3>
-            <p className="modal-text">
-              Start typing to see products you are looking for.
-            </p>
-            <form className="search-form">
-              <input type="text" placeholder="Search a product" />
-              <button>
-                <i className="bi bi-search" />
-              </button>
-            </form>
-            <div className="search-results">
-              <div className="search-heading">
-                <h3>RESULTS FROM PRODUCT</h3>
-              </div>
-              <div className="results">
-                <a href="#" className="result-item">
-                  <img
-                    src="img/products/product1/1.png"
-                    className="search-thumb"
-                    alt
-                  />
-                  <div className="search-info">
-                    <h4>Analogue Resin Strap</h4>
-                    <span className="search-sku">SKU: PD0016</span>
-                    <span className="search-price">$108.00</span>
-                  </div>
-                </a>
-                <a href="#" className="result-item">
-                  <img
-                    src="img/products/product2/1.png"
-                    className="search-thumb"
-                    alt
-                  />
-                  <div className="search-info">
-                    <h4>Analogue Resin Strap</h4>
-                    <span className="search-sku">SKU: PD0016</span>
-                    <span className="search-price">$108.00</span>
-                  </div>
-                </a>
-              </div>
-            </div>
-            <i className="bi bi-x-circle" id="close-search" />
-          </div>
-        </div>
-        <div className="modal-dialog">
-          <div className="modal-content">
-            <button className="modal-close">
-              <i className="bi bi-x" />
-            </button>
-            <div className="modal-image">
-              <img src="img/modal-dialog.jpg" alt />
-            </div>
-            <div className="popup-wrapper">
-              <div className="popup-content">
-                <div className="popup-title">
-                  <h3>NEWSLETTER</h3>
-                </div>
-                <p className="popup-text">
-                  Sign up to our newsletter and get exclusive deals you won find
-                  any where else straight to your inbox!
-                </p>
-                <form className="popup-form">
-                  <input type="text" placeholder="Enter Email Address Here" />
-                  <button className="btn btn-primary">SUBSCRIBE</button>
-                  <label>
-                    <input type="checkbox" />
-                    <span>Dont show this popup again</span>
-                  </label>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </>
   );
 };
