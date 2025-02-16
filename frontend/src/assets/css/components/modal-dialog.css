@@ -13,12 +13,12 @@
   opacity: 0;
 }
 
-.modal-dialog.show {
+.show {
   visibility: visible !important;
   opacity: 1;
 }
 
-.modal-dialog::after {
+.modal-overlay {
   content: "";
   width: 100%;
   height: 100%;

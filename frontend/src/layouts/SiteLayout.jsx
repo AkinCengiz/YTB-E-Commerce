@@ -7,10 +7,11 @@ import { useState } from "react";
 
 function SiteLayout({children}) {
     const [isSearchShow, setIsSearchShow] = useState(false);
+    const [isDialogShow, setIsDialogShow] = useState(true);
   return (
     <div className="site-layout">
         <Search isSearchShow={isSearchShow} setIsSearchShow={setIsSearchShow} />
-        <Dialog />
+        <Dialog isDialogShow={isDialogShow} setIsDialogShow={setIsDialogShow}/>
         <Header setIsSearchShow={setIsSearchShow}/>
             { children }
         <Footer/>

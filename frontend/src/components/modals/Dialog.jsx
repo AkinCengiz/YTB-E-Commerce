@@ -1,9 +1,11 @@
-function Dialog() {
+import PropTypes from "prop-types"
+
+function Dialog({isDialogShow, setIsDialogShow}) {
   return (
     <>
-      <div className="modal-dialog">
+      <div className={`modal-dialog ${isDialogShow ? "show" : ""}`}>
         <div className="modal-content">
-          <button className="modal-close">
+          <button className="modal-close" onClick={() => setIsDialogShow(false)}>
             <i className="bi bi-x" />
           </button>
           <div className="modal-image">
@@ -29,9 +31,15 @@ function Dialog() {
             </div>
           </div>
         </div>
+        <div className="modal-overlay" onClick={() => setIsDialogShow(false)}></div>
       </div>
     </>
   );
 }
 
 export default Dialog;
+
+Dialog.propTypes = {
+    isDialogShow : PropTypes.bool,
+    setIsDialogShow : PropTypes.func
+}
