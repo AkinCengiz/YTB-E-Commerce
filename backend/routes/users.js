@@ -1,4 +1,5 @@
 const express = require("express");
+const bycrypt = require("bcrypt");
 const router = express.Router();
 const User = require("../models/User");
 
@@ -29,6 +30,32 @@ router.get("/:userId", async(req,res) => {
     }
 })
 // ID bilgisine göre kullanıcı getirme => GetById()
+
+//Kullanıcı güncelleme başlangıç
+
+router.put("/:userId", async (req,res) => {
+    try {
+        const userId = req.params.userId;
+        const updateInfo = req.body;
+
+        const updatedUser = await User.findById(userId);
+
+        if(!updatedUser){
+            res.status(404).json({error : "Verilen id değerine ait kullanıcı bulunamadı..."});
+        }
+
+        if(updateInfo.password){
+            updateInfo.password = await bycrypt.hash(updateInfo.password,7);
+        }
+
+        const updated = await User.findByIdAndUpdate(userId,updateInfo,{new : true});
+        res.status(200).json(updated);
+    } catch (error) {
+        
+    }
+})
+
+//Kullanıcı güncelleme bitiş
 
 // Kullanıcı silme => Delete()
 router.delete("/:email", async(req,res) => {
