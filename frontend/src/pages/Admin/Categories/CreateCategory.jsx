@@ -1,5 +1,5 @@
 
-import { Button, Form, Input } from "antd";
+import { Button, Form, Input, message } from "antd";
 import { useNavigate } from "react-router-dom";
 
 function CreateCategory() {
@@ -15,10 +15,10 @@ function CreateCategory() {
             body : JSON.stringify(values)
         });
         if(response.ok){
-            console.log("Kategori başarıyla eklendi...");
+            message.success("Kategori başarıyla eklendi...");
             navigate("/admin/categories")
         }else{
-            console.log("Kategori oluşturulurken hata meydana geldi...");
+            message.error("Kategori oluşturulurken hata meydana geldi...");
         }
     } catch (error) {
         console.log("Sunucu hatası : ",error);
