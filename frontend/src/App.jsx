@@ -9,6 +9,8 @@ import AccountPage from './pages/AccountPage'
 import SingleBlogPage from './pages/SingleBlogPage'
 import SingleProductPage from './pages/SingleProductPage'
 import CategoryList from "./pages/Admin/Categories/CategoryList"
+import CreateCategory from "./pages/Admin/Categories/CreateCategory"
+import UpdateCategory from "./pages/Admin/Categories/UpdateCategory"
 
 
 function App() {
@@ -27,6 +29,8 @@ function App() {
       <Route path="/admin/*">
         <Route index element={<CategoryList />} />
         <Route path="categories" element={<CategoryList/>} />
+        <Route path="categories/create" element={<CreateCategory/>} />
+        <Route path="categories/update" element={<UpdateCategory/>} />
       </Route>
     </Routes>
     </>
