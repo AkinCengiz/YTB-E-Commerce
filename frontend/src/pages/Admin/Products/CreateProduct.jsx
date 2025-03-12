@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Button, Checkbox, Form, Input, InputNumber, message, Select } from "antd";
 
 function CreateProduct() {

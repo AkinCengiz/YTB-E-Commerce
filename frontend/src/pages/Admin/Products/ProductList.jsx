@@ -26,6 +26,7 @@ function ProductList() {
                 });
                 console.log(products);
                 setProducts(dataSource);
+                console.log(dataSource);
             }
         } catch (error) {
             console.log("Sunucu hatası", error);  
